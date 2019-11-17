@@ -16,10 +16,12 @@ class App extends React.Component {
   }
 
   render () {
-    <div className="App">
-      <TaskForm></TaskForm>
-      <Tasks tareas={this.state.tareas}></Tasks>
-    </div>
+    return (
+      <div className="App">
+        <TaskForm></TaskForm>
+        <Tasks tareas={this.state.tareas}></Tasks>
+      </div>
+    );
   }
 }
 

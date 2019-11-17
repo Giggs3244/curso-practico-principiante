@@ -5,7 +5,7 @@ import Task from './Task';
 export default class Tasks extends Component {
 
     render() {
-        return this.props.tareas.map((v, i) => <Task tarea={v}></Task>);
+        return this.props.tareas.map((v, i) => <Task key={v.id} tarea={v}></Task>);
     }
 
 }
