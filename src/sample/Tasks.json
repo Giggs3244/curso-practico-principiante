@@ -1,24 +1,24 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "nombre": "Task 1",
         "descripcion": "Task description 1",
         "done": false
     },
     {
-        "id": "2",
+        "id": 2,
         "nombre": "Task 2",
         "descripcion": "Task description 2",
         "done": true
     },
     {
-        "id": "3",
+        "id": 3,
         "nombre": "Task 3",
         "descripcion": "Task description 3",
         "done": false
     },
     {
-        "id": "4",
+        "id": 4,
         "nombre": "Task 4",
         "descripcion": "Task description 4",
         "done": true

@@ -15,11 +15,19 @@ class App extends React.Component {
 
   }
 
+  changeEstadoTarea = (id) => {
+    console.log(id);
+  }
+
+  deleteTarea = (id) => {
+    console.log(id);
+  }
+
   render () {
     return (
       <div className="App">
         <TaskForm></TaskForm>
-        <Tasks tareas={this.state.tareas}></Tasks>
+        <Tasks tareas={this.state.tareas} changeEstadoTarea={this.changeEstadoTarea} deleteTarea={this.deleteTarea}></Tasks>
       </div>
     );
   }
