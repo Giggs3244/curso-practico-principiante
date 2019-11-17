@@ -4,20 +4,12 @@ import Task from './Task';
 
 export default class Tasks extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        return (
-            this.props.tareas.map((v, i) => {
-                <Task tarea={v}></Task>
-            })
-        );
+        return this.props.tareas.map((v, i) => <Task tarea={v}></Task>);
     }
 
 }
 
 Tasks.propTypes = {
-    tareas: PropTypes.array
+    tareas: PropTypes.array.isRequired
 };

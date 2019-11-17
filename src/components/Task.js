@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 
 export default class Task extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
 
         return (
