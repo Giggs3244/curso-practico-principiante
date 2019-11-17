@@ -3,6 +3,7 @@ import './App.css';
 import TaskForm from './components/TaskForm';
 import Tasks from './components/Tasks';
 import tareas from './sample/tasks.json'
+import Users from './components/Users'
 
 class App extends React.Component {
 
@@ -56,6 +57,7 @@ class App extends React.Component {
       <div className="App">
         <TaskForm addTarea={this.addTarea}></TaskForm>
         <Tasks tareas={this.state.tareas} changeEstadoTarea={this.changeEstadoTarea} deleteTarea={this.deleteTarea}></Tasks>
+        <Users></Users>
       </div>
     );
   }
