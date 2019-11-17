@@ -4,6 +4,7 @@ import TaskForm from './components/TaskForm';
 import Tasks from './components/Tasks';
 import tareas from './sample/tasks.json'
 import Users from './components/Users'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class App extends React.Component {
 
@@ -55,9 +56,16 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        <TaskForm addTarea={this.addTarea}></TaskForm>
-        <Tasks tareas={this.state.tareas} changeEstadoTarea={this.changeEstadoTarea} deleteTarea={this.deleteTarea}></Tasks>
-        <Users></Users>
+        <Router>
+          <Link to="/">Home</Link>
+          <br></br>
+          <Link to="/users">Users</Link>
+          <Route exact path="/">
+            <TaskForm addTarea={this.addTarea}></TaskForm>
+            <Tasks tareas={this.state.tareas} changeEstadoTarea={this.changeEstadoTarea} deleteTarea={this.deleteTarea}></Tasks>
+          </Route>
+          <Route path="/users" component={Users}></Route>
+        </Router>
       </div>
     );
   }
