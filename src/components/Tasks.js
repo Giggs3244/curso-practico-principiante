@@ -5,6 +5,7 @@ import Task from './Task';
 export default class Tasks extends Component {
 
     render() {
+        console.log(this.props.tareas);
         return this.props.tareas.map((v, i) => <Task key={v.id} tarea={v} changeEstadoTarea={this.props.changeEstadoTarea} deleteTarea={this.props.deleteTarea}></Task>);
     }
 

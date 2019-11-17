@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class TaskForm extends Component {
 
@@ -6,12 +7,21 @@ export default class TaskForm extends Component {
         super(props);
         this.state = {
             nombre: '',
-            descripcion: ''
+            descripcion: '',
+            done: false,
+            id: 0
         }
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
+        const tarea = {
+            nombre: this.state.nombre,
+            descripcion: this.state.descripcion,
+            done: this.state.done,
+            id: this.state.id
+        };
+        this.props.addTarea(tarea);
     }
 
     handleChange = (event) => {
@@ -44,3 +54,7 @@ export default class TaskForm extends Component {
     }
 
 }
+
+TaskForm.propTypes = {
+    addTarea: PropTypes.func.isRequired
+};
