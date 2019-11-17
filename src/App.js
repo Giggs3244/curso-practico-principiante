@@ -17,10 +17,11 @@ class App extends React.Component {
 
   addTarea = (tarea) => {
     console.log(tarea);
-    tarea.id = this.state.tareas.length + 1;
+    tarea.id = (this.state.tareas.length + 1);
     console.log(tarea.id);
+    console.log([tarea]);
     this.setState({
-      tareas: tareas.concat(tarea)
+      tareas: this.state.tareas.concat([tarea])
     });
     console.log(this.state.tareas);
   }

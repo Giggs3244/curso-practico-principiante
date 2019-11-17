@@ -7,7 +7,7 @@ export default class Task extends Component {
 
         return (
             <div className="tarea">
-                <p>Nombre de la tarea: {this.props.tarea.nombre}</p>
+                <p>Nombre de la tarea: {this.props.tarea.nombre} - id: {this.props.tarea.id}</p>
                 <p>Descripción de la tarea: {this.props.tarea.descripcion}</p>
                 <input type="checkbox" checked={this.props.tarea.done} onChange={() => this.props.changeEstadoTarea(this.props.tarea.id)}></input>
                 <button onClick={() => this.props.deleteTarea(this.props.tarea.id)}>X</button>
